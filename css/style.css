@@ -1,0 +1,184 @@
+:root {
+    --blanco: #ffffff;
+    --oscuro: #0b0f2f;
+    --primario: #1c1f4a;
+    --secundario: #e91f4b;
+    --gris: #3c3f58;
+    --grisClaro: #f2f4f8;
+}
+
+/* RESET */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--grisClaro);
+    margin: 0;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    background-color: var(--blanco);
+    padding: 2rem;
+}
+
+/* NAV */
+nav {
+    background-color: var(--secundario);
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1.5rem;
+}
+
+nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('../img/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 8rem 2rem;
+}
+
+.hero h2 { font-size: 3rem; margin-bottom: 1rem; }
+
+.boton {
+    background-color: var(--secundario);
+    color: white;
+    padding: 1.2rem 3rem;
+    text-decoration: none;
+    border-radius: .5rem;
+    display: inline-block;
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+/* CONTENEDOR PRINCIPAL DE SERVICIOS */
+.contenedor-blanco {
+    max-width: 1000px;
+    margin: -5rem auto 4rem auto;
+    background-color: var(--blanco);
+    padding: 4rem;
+    border-radius: 1rem;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+}
+
+.contenedor-blanco h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+/* GRID Y ALINEACIÓN DE TARJETAS */
+@media (min-width: 768px) {
+    .servicios-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+        align-items: stretch; /* Estira las tarjetas para que midan lo mismo */
+    }
+}
+
+.servicio-card {
+    display: flex;
+    flex-direction: column; /* Alinea contenido en vertical */
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 1rem;
+    transition: transform .3s ease;
+}
+
+.servicio-card h3 {
+    color: var(--secundario);
+    margin-bottom: 1.5rem;
+    min-height: 50px; /* Asegura que los títulos ocupen el mismo espacio */
+}
+
+/* ICONOS CIRCULARES */
+.servicio-card svg {
+    background-color: var(--primario);
+    color: white;
+    border-radius: 50%;
+    padding: 2rem;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 2rem;
+}
+
+.servicio-card p {
+    line-height: 1.6;
+    color: var(--oscuro);
+}
+
+/* FORMULARIO DE CONTACTO */
+.contacto-seccion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+}
+
+.formulario {
+    background-color: var(--gris);
+    width: 100%;
+    max-width: 500px;
+    padding: 3rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset { border: none; padding: 0; }
+
+.formulario legend {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.campo { margin-bottom: 1.5rem; }
+
+.formulario label { color: white; display: block; margin-bottom: .5rem; }
+
+.formulario input, .formulario textarea {
+    width: 100%;
+    padding: 1.2rem;
+    border-radius: .5rem;
+    border: none;
+}
+
+.formulario button {
+    background-color: var(--secundario);
+    color: white;
+    width: 100%;
+    padding: 1.5rem;
+    border: none;
+    border-radius: .5rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--primario);
+    color: white;
+}
